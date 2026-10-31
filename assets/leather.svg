@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <radialGradient id="puff" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8f5833"/>
+      <stop offset="0.55" stop-color="#6b3f23"/>
+      <stop offset="1" stop-color="#4a2814"/>
+    </radialGradient>
+    <radialGradient id="stud" cx="35%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#f4e0b0"/>
+      <stop offset="0.5" stop-color="#c4a06a"/>
+      <stop offset="1" stop-color="#6e4f21"/>
+    </radialGradient>
+  </defs>
+  <rect width="120" height="120" fill="#4a2814"/>
+  <g fill="url(#puff)" stroke="#2a1409" stroke-width="3" stroke-linejoin="round">
+    <path d="M60 -60 L120 0 L60 60 L0 0 Z"/>
+    <path d="M0 0 L60 60 L0 120 L-60 60 Z"/>
+    <path d="M120 0 L180 60 L120 120 L60 60 Z"/>
+    <path d="M60 60 L120 120 L60 180 L0 120 Z"/>
+  </g>
+  <g fill="url(#stud)" stroke="#2a1409" stroke-width="1">
+    <circle cx="0" cy="0" r="4.5"/>
+    <circle cx="120" cy="0" r="4.5"/>
+    <circle cx="0" cy="120" r="4.5"/>
+    <circle cx="120" cy="120" r="4.5"/>
+    <circle cx="60" cy="60" r="4.5"/>
+  </g>
+</svg>

@@ -10,13 +10,17 @@
   <meta property="og:locale" content="sk_SK">
   <meta property="og:title" content="The Queens Club Nitra | nights taste better here.">
   <meta property="og:description" content="Koktejlový klub na Mostnej 34 v Nitre. Utorok až sobota.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mosadzná tabuľka The Queens Club na stehovanej koňakovej koži a pohár Negroni">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="motion.css">
   <script defer src="script.js"></script>
-  <script defer src="motion.js"></script>
+  <script defer src="dialogue.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,60 +66,58 @@
       <a href="#pohar">Drinky</a>
       <a href="#noci">Noci</a>
       <a href="#hodiny">Hodiny</a>
+      <a class="button button-raspberry topbar-book" href="tel:+421910781117">Rezervovať stôl</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="sunburst" aria-hidden="true"></div>
-      <svg class="hero-crown" viewBox="0 0 48 32" width="72" height="48" aria-hidden="true" focusable="false">
-        <path d="M3 28 L1 8 L13 18 L24 3 L35 18 L47 8 L45 28 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-        <path d="M5 28 H43" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        <circle cx="24" cy="3" r="1.6" fill="currentColor"/>
-        <circle cx="1" cy="8" r="1.4" fill="currentColor"/>
-        <circle cx="47" cy="8" r="1.4" fill="currentColor"/>
-      </svg>
-      <h1 class="hero-title">
-        <span class="hero-line">nights</span>
-        <span class="hero-line hero-line-italic">taste better</span>
-        <span class="hero-line">here<span class="hero-dot">.</span></span>
-        <span class="visually-hidden">The Queens Club Nitra, koktejlový klub</span>
-      </h1>
-      <div class="hero-info">
-        <p class="hero-status" data-open-status>Otváracie hodiny nižšie</p>
-        <p class="hero-where">Mostná 34, Nitra. Utorok až sobota, v piatok a sobotu do 3:00.</p>
+      <div class="hero-copy">
+        <h1 class="plate">
+          <span class="plate-name">The Queens Club</span>
+          <span class="plate-sub">koktejlový klub · Mostná 34, Nitra</span>
+        </h1>
+        <p class="hero-tagline">nights taste better here.</p>
+        <p class="hero-lede">Koktejly, afro house a DJ večery. Utorok až sobota, v piatok a sobotu do 3:00.</p>
+        <p class="status" data-open-status>Otváracie hodiny nižšie</p>
         <div class="actions">
-          <a class="button button-raspberry" href="tel:+421910781117">Rezervovať: 0910 781 117</a>
+          <a class="button button-raspberry" href="tel:+421910781117">Rezervovať stôl: 0910 781 117</a>
           <a class="button button-line" href="https://www.google.com/maps/search/?api=1&amp;query=The+Queens+Club+Mostná+34+Nitra" rel="noopener">Otvoriť mapu</a>
         </div>
       </div>
+      <svg class="hero-glass" viewBox="0 0 260 320" role="img" aria-label="Pohár Negroni s veľkou kockou ľadu a pomarančovou kôrou">
+        <defs>
+          <linearGradient id="negroni" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c0291d"/>
+            <stop offset="1" stop-color="#85160f"/>
+          </linearGradient>
+        </defs>
+        <ellipse class="glass-shadow" cx="130" cy="296" rx="100" ry="11"/>
+        <path class="glass-drink" d="M64 128 L196 128 L190 278 Q190 286 182 286 L78 286 Q70 286 70 278 Z"/>
+        <rect class="glass-ice" x="94" y="104" width="72" height="72" rx="8" transform="rotate(-8 130 140)"/>
+        <path class="glass-body" d="M58 92 L202 92 L192 282 Q191 292 181 292 L79 292 Q69 292 68 282 Z"/>
+        <path class="glass-peel" d="M148 98 C186 70 218 104 190 124"/>
+      </svg>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i></span>
-        <span>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i>nights taste better here<i class="marquee-sep"></i></span>
-      </div>
-    </div>
-
     <section class="dialogue" id="noc" aria-label="Rozhovor pri bare">
-      <p class="dialogue-line dialogue-left" data-reveal>dáme si jeden drink?</p>
-      <p class="dialogue-line dialogue-right" data-reveal>jasne, a možno dva?</p>
-      <p class="dialogue-line dialogue-left" data-reveal>no dobre… tak tri.</p>
+      <p class="dialogue-line dialogue-left">dáme si jeden drink?</p>
+      <p class="dialogue-line dialogue-right">jasne, a možno dva?</p>
+      <p class="dialogue-line dialogue-left">no dobre… tak tri.</p>
     </section>
 
     <section class="glass" id="pohar">
       <h2>V pohári</h2>
       <ol class="drink-list">
-        <li data-reveal>
+        <li>
           <span class="drink-name">Zombie</span>
           <span class="placeholder">[DOPLNIŤ] zloženie a cena</span>
         </li>
-        <li data-reveal>
+        <li>
           <span class="drink-name">Mojito</span>
           <span class="placeholder">[DOPLNIŤ] zloženie a cena</span>
         </li>
-        <li data-reveal>
+        <li>
           <span class="drink-name">Negroni</span>
           <span class="placeholder">[DOPLNIŤ] zloženie a cena</span>
         </li>
@@ -124,7 +126,7 @@
     </section>
 
     <section class="nights" id="noci">
-      <h2 data-reveal>Noci</h2>
+      <h2>Noci</h2>
       <p>Afro house, DJ večery a sviatočné akcie. Plagáty a termíny nájdeš na Instagrame. Na Silvestra a veľké noci sa rezervuje vopred.</p>
       <a class="button button-bronze" href="https://www.instagram.com/thequeensclub_nitra/" rel="noopener">Program na Instagrame</a>
     </section>
@@ -132,7 +134,7 @@
     <section class="hours" id="hodiny">
       <h2>Hodiny</h2>
       <div class="hours-grid">
-        <div class="timeline deco-frame" data-reveal="fade" role="group" aria-label="Otváracie hodiny">
+        <div class="timeline" role="group" aria-label="Otváracie hodiny">
           <div class="timeline-axis" aria-hidden="true">
             <span>18:00</span><span>21:00</span><span>00:00</span><span>03:00</span>
           </div>
@@ -161,26 +163,17 @@
   </main>
 
   <footer class="footer">
-    <p class="footer-social">
+    <p class="footer-links">
       <a href="https://www.instagram.com/thequeensclub_nitra/" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/thequeensclubnitra" rel="noopener">Facebook</a>
+      <a href="ochrana-udajov.html">Ochrana údajov</a>
     </p>
     <p class="footer-note">Návrh webstránky — [DOPLNIŤ názov štúdia]. Nejde o oficiálnu stránku The Queens Club.</p>
   </footer>
 
-  <a class="orb" href="tel:+421910781117" rel="noopener" aria-label="Zavolať a rezervovať stôl">
-    <svg class="orb-ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-      <defs>
-        <path id="orb-path" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
-      </defs>
-      <text><textPath href="#orb-path" textLength="270" lengthAdjust="spacing">Rezervovať • Zavolať • Rezervovať • Zavolať •</textPath></text>
-    </svg>
-    <svg class="orb-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-  </a>
-
   <nav class="dock" aria-label="Rýchle akcie">
-    <a class="button button-line" href="tel:+421910781117">Zavolať</a>
-    <a class="button button-raspberry" href="tel:+421910781117">Rezervovať</a>
+    <a class="button button-raspberry" href="tel:+421910781117">Rezervovať stôl</a>
+    <a class="button button-line" href="https://www.google.com/maps/search/?api=1&amp;query=The+Queens+Club+Mostná+34+Nitra" rel="noopener">Mapa</a>
   </nav>
 </body>
 </html>
